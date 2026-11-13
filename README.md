@@ -3,6 +3,10 @@
 Versión web de la app Android **ControlGastos**, pensada para usarse en el iPhone como aplicación
 instalada (PWA). Funciona sin conexión y guarda los datos en el propio dispositivo.
 
+**App publicada:** <https://urielfm17.github.io/controldegastos/>
+
+**Repositorio:** <https://github.com/urielfm17/controldegastos>
+
 ## Funciones
 
 - Registro de **gastos** e **ingresos** en efectivo o débito.
@@ -31,29 +35,23 @@ python3 -m http.server 8000
 Abre <http://localhost:8000>. El service worker y la instalación PWA necesitan `localhost` o HTTPS;
 si abres `index.html` directamente con `file://`, la app funciona pero no se instala ni cachea.
 
-## Publicar en GitHub Pages (gratis)
+## Publicación en GitHub Pages
 
-1. Crea un repositorio en GitHub, por ejemplo `control-gastos`.
-2. Sube el contenido de esta carpeta (no la carpeta contenedora) a la rama `main`:
+La app ya está publicada en:
 
-   ```bash
-   cd ControlGastosWeb
-   git init
-   git add .
-   git commit -m "Control de Gastos web"
-   git branch -M main
-   git remote add origin https://github.com/TU_USUARIO/control-gastos.git
-   git push -u origin main
-   ```
+```text
+https://urielfm17.github.io/controldegastos/
+```
 
-3. En GitHub entra a **Settings → Pages**.
-4. En **Build and deployment → Source** elige **Deploy from a branch**.
-5. Selecciona la rama `main` y la carpeta `/ (root)`. Guarda.
-6. En uno o dos minutos la app estará en:
+GitHub Pages está configurado con **Deploy from a branch → `main` → `/ (root)`**. Cada push a
+`main` actualiza la web automáticamente en uno o dos minutos.
 
-   ```text
-   https://TU_USUARIO.github.io/control-gastos/
-   ```
+Para trabajar en otra copia del proyecto:
+
+```bash
+git clone https://github.com/urielfm17/controldegastos.git
+cd controldegastos
+```
 
 El archivo `.nojekyll` ya está incluido para que GitHub Pages sirva todos los archivos tal cual.
 El repositorio solo contiene el código: **los movimientos y el presupuesto nunca se suben**, se
@@ -61,7 +59,7 @@ guardan en el navegador de cada dispositivo.
 
 ## Instalar en el iPhone
 
-1. Abre la URL de GitHub Pages en **Safari** (tiene que ser Safari, no Chrome).
+1. Abre <https://urielfm17.github.io/controldegastos/> en **Safari** (tiene que ser Safari, no Chrome).
 2. Toca el botón **Compartir** (cuadrado con flecha hacia arriba).
 3. Elige **Añadir a pantalla de inicio**.
 4. Confirma el nombre y toca **Añadir**.
